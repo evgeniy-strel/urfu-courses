@@ -1,28 +1,19 @@
 import React from "react";
-import './App.scss';
-//Bootstrap
-import {Container} from 'react-bootstrap'
-//Components
-import NaviBar from "./components/Header";
-import CourseBar from "./components/Sidebar";
+import "./style.css";
 
+import Header from "./components/Header/Header";
+import Sidebar from "./components/Sidebar/Sidebar";
+import Cards from "./components/Cards/Cards";
+import Tracks from "./components/Tracks/Tracks";
+import Main from "./pages/Main/Main";
 
 function App() {
-    return (
-        <>
-            {/*Header*/}
-            <NaviBar/>
-
-            {/*Main Content*/}
-            <Container>
-                {/*Sidebar*/}
-                <CourseBar/>
-
-            </Container>
-
-        </>
-
-    );
+  return (
+    <div className="wrapper">
+      <Main />
+      <Sidebar />
+    </div>
+  );
 }
 
 export default App;

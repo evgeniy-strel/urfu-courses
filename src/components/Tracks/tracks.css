@@ -1,0 +1,52 @@
+.tracks-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.track {
+  /* background: red; */
+  /* border: 50px black; */
+  /* margin: 10px auto; */
+  width: 800px;
+  height: 50px;
+  border-radius: 15px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+
+  transition: 0.4s;
+}
+
+.track .track_title {
+  /* text-align: center; */
+  /* vertical-align: middle; */
+  color: #01b3ff;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 27px;
+}
+
+/* .track .track_bar {
+  width: 200px;
+  height: 15px;
+  background-color: rgb(209, 238, 255);
+  border-radius: 10px;
+
+  margin-right: 50px;
+  display: flex;
+  justify-content: right;
+} */
+
+
+.track:hover {
+  transform: scale(0.99, 0.99);
+}

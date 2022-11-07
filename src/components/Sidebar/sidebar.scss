@@ -1,0 +1,63 @@
+.sidebar {
+  width: 270px;
+  height: 100vh;
+  padding-top: 30px;
+  background: #fff;
+  font-family: 'Inter', sans-serif;
+  user-select: none;
+  float: left;
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  & &_title {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 33px;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    color: #000;
+  }
+  & .number_course {
+    width: 226px;
+    margin-left: 22px;
+    margin-bottom: 22px;
+    cursor: pointer;
+    border-radius: 15px;
+    overflow: hidden;
+    box-sizing: border-box;
+    &.active {
+      border: 1px solid #00b2ff;
+      background: linear-gradient(254.09deg, #8bdcff 57.62%, rgba(139, 220, 255, 0.23) 170.62%);
+      border: 1px solid #3daede;
+    }
+    .container_title_course {
+      width: 100%;
+      padding: 11px 15px;
+      box-sizing: border-box;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      color: #000000;
+      .emojy_course {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 36px;
+        margin-right: 18px;
+      }
+    }
+    .container_number_semestr {
+      width: 100%;
+      font-weight: 400;
+      font-size: 18px;
+      padding: 15px 30px;
+      line-height: 22px;
+      background-color: #fff;
+      &.active {
+        background: linear-gradient(98.9deg, #00b2ff 47.3%, rgba(0, 178, 255, 0.51) 112.31%);
+        color: #fff;
+      }
+    }
+  }
+}
