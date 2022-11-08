@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-
-.header {
+s.header {
   display: flex;
   justify-content: space-between;
+  font-family: 'Inter', sans-serif;
 }
 
 .search_container {
@@ -23,7 +22,7 @@ input.search {
   height: 100%;
   padding: 11px;
   background-color: #ffffff;
-  background-image: url('img/search.svg');
+  //background-image: url('/img/search.svg');
   background-repeat: no-repeat;
   background-position: 16px center;
   padding-left: 30px;
@@ -32,7 +31,6 @@ input.search {
   padding-left: 69px;
   font-size: 22px;
   line-height: 29px;
-  font-family: inherit;
   color: #acacac;
   &:active {
     border: none;
@@ -46,7 +44,7 @@ input.search {
     font-size: 25px;
     line-height: 29px;
     color: #acacac;
-    font-family: inherit;
+    font-family: 'Inter', sans-serif;
   }
 }
 
