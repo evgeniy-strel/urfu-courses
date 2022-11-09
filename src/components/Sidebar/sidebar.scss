@@ -1,10 +1,12 @@
 .sidebar {
-  width: 270px;
+  width: 250px;
   height: 100vh;
+  position: fixed;
   padding-top: 30px;
   background: #fff;
   font-family: 'Inter', sans-serif;
   user-select: none;
+  border-right: 1px solid #898989;
   float: left;
   p {
     margin: 0;
@@ -19,9 +21,12 @@
     line-height: 30px;
     color: #000;
   }
+  & .list_courses {
+    width: 209px;
+    margin: 0 auto;
+  }
   & .number_course {
-    width: 226px;
-    margin-left: 22px;
+    width: 209px;
     margin-bottom: 22px;
     cursor: pointer;
     border-radius: 15px;
@@ -29,7 +34,11 @@
     box-sizing: border-box;
     &.active {
       border: 1px solid #00b2ff;
-      background: linear-gradient(254.09deg, #8bdcff 57.62%, rgba(139, 220, 255, 0.23) 170.62%);
+      background: linear-gradient(
+        254.09deg,
+        #8bdcff 57.62%,
+        rgba(139, 220, 255, 0.23) 170.62%
+      );
       border: 1px solid #3daede;
     }
     .container_title_course {
@@ -55,7 +64,11 @@
       line-height: 22px;
       background-color: #fff;
       &.active {
-        background: linear-gradient(98.9deg, #00b2ff 47.3%, rgba(0, 178, 255, 0.51) 112.31%);
+        background: linear-gradient(
+          98.9deg,
+          #00b2ff 47.3%,
+          rgba(0, 178, 255, 0.51) 112.31%
+        );
         color: #fff;
       }
     }

@@ -1,6 +1,7 @@
 .sidebar {
-  width: 270px;
+  width: 250px;
   height: 100vh;
+  position: fixed;
   padding-top: 30px;
   background: #fff;
   font-family: 'Inter', sans-serif;
@@ -8,6 +9,7 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  border-right: 1px solid #898989;
   float: left;
 }
 
@@ -26,9 +28,13 @@
   color: #000;
 }
 
+.sidebar .list_courses {
+  width: 209px;
+  margin: 0 auto;
+}
+
 .sidebar .number_course {
-  width: 226px;
-  margin-left: 22px;
+  width: 209px;
   margin-bottom: 22px;
   cursor: pointer;
   border-radius: 15px;
@@ -74,4 +80,4 @@
   background: linear-gradient(98.9deg, #00b2ff 47.3%, rgba(0, 178, 255, 0.51) 112.31%);
   color: #fff;
 }
-/*# sourceMappingURL=Sidebar.css.map */
+/*# sourceMappingURL=sidebar.css.map */

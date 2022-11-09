@@ -1,8 +1,7 @@
-.cards {
-  font-family: 'Inter', sans-serif;
-}
-
 .cards_title {
+  font-family: 'Inter', sans-serif;
+  margin: 30px 0;
+  padding: 0;
   font-weight: 600;
   font-size: 25px;
   line-height: 30px;
@@ -13,39 +12,50 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
   justify-content: space-between;
+  gap: 25px;
 }
 
 .card {
+  width: 350px;
+  height: 215px;
+  box-sizing: border-box;
+  border: 1px solid #ffffff;
+  padding: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_background {
   background: linear-gradient(
     90.55deg,
     #7068c1 -2.67%,
     rgba(4, 190, 0, 0.74) 153.82%
   );
-  margin: 30px auto;
-  width: 380px;
-  height: 230px;
-  border-radius: 40px;
-  cursor: pointer;
-
-  /*box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),*/
-  /*  -5px -5px 30px 7px rgba(0, 0, 0, 0.22);*/
-  transition: 0.4s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 350px;
+  height: 215px;
+  filter: blur(1px) drop-shadow(0px 4px 44px rgba(0, 0, 0, 0.25));
+  border-radius: 15px;
 }
 
 .card .card_title {
-  display: flex;
   text-align: center;
-  padding: 70px 0; /*Костыль ебать*/
   font-weight: 500;
   font-size: 20px;
-  height: 25px;
   color: white;
+  position: relative;
+  z-index: 2;
 }
 
 .card:hover {
-  transform: scale(0.95, 0.95);
-  /*box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),*/
-  /*  -5px -5px 30px 15px rgba(0, 0, 0, 0.22);*/
+  transform: scale(1.05);
 }

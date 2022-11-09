@@ -9,18 +9,20 @@ const Sidebar = () => {
   const emojyCourses = ['👶', '👦', '🧔', '👴'];
 
   return (
-    <div className="sidebar">
-      <p className="sidebar_title">URFU Courses</p>
-      {listCourses.map((numberCourse) => (
-        <CourseBlock
-          numberCourse={numberCourse}
-          emojy={emojyCourses[numberCourse - 1]}
-          isActiveCourse={activeCourse === numberCourse}
-          setActiveCourse={setActiveCourse}
-          numberActiveSemestr={activeSemestr}
-          setActiveSemestr={setActiveSemestr}
-        />
-      ))}
+    <div className='sidebar'>
+      <p className='sidebar_title'>URFU Courses</p>
+      <div className='list_courses'>
+        {listCourses.map((numberCourse) => (
+          <CourseBlock
+            numberCourse={numberCourse}
+            emojy={emojyCourses[numberCourse - 1]}
+            isActiveCourse={activeCourse === numberCourse}
+            setActiveCourse={setActiveCourse}
+            numberActiveSemestr={activeSemestr}
+            setActiveSemestr={setActiveSemestr}
+          />
+        ))}
+      </div>
     </div>
   );
 };
