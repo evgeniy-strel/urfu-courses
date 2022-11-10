@@ -1,54 +1,39 @@
 import React from 'react';
 import './cards.css';
+import { courses } from './../../mocks/courses';
+import { gradients, getRandomGradient } from './../../gradients/gradients';
+
+// обсудить градиенты карточек при отсутствии картинок: все единым градиентом или берется из базы
+
+const getBackgroundStyles = (course) => {
+  if (course.bgImg) {
+    return `url(${course.bgImg})`;
+  }
+  return gradients[0];
+};
 
 export default function Cards() {
-    return (
-        <div className='cards'>
-            <p className='cards_title'>Список всех найденных курсов:</p>
-            <div className='cards_list'>
-                <div className='card'>
-                    <div className='card_background'></div>
-                    <p className='card_title'>Математические методы для разработчиков</p>
-                    <a href="#">
+  return (
+    <div className='cards'>
+      <p className='cards_title'>Список всех найденных курсов:</p>
+      <div className='cards_list'>
+        {courses.map((course) => (
+          <>
+            <div className='card' key={course.id}>
+              <div
+                className='card_background'
+                style={{
+                  background: getBackgroundStyles(course),
+                  backgroundSize: 'cover',
+                }}></div>
+              <p className='card_title'>{course.title}</p>
+              {/* <a href="#">
                         <span className="link"></span>
-                    </a>
-                </div>
-                <div className='card'>
-                    <div className='card_background'></div>
-                    <p className='card_title'>Экономические и гуманитарные аспекты информационных технологий</p>
-                    <a href="#">
-                        <span className="link"></span>
-                    </a>
-                </div>
-                <div className='card'>
-                    <div className='card_background'></div>
-                    <p className='card_title'>Базовая архитектура программного обеспечения</p>
-                    <a href="#">
-                        <span className="link"></span>
-                    </a>
-                </div>
-                <div className='card'>
-                    <div className='card_background'></div>
-                    <p className='card_title'>Профессиональный курс. Спецкурс 1</p>
-                    <a href="#">
-                        <span className="link"></span>
-                    </a>
-                </div>
-                <div className='card'>
-                    <div className='card_background'></div>
-                    <p className='card_title'>Профессиональный курс. Спецкурс 2</p>
-                    <a href="#">
-                        <span className="link"></span>
-                    </a>
-                </div>
-                <div className='card'>
-                    <div className='card_background'></div>
-                    <p className='card_title'>Математические методы для разработчиков 1</p>
-                    <a href="#">
-                        <span className="link"></span>
-                    </a>
-                </div>
+                    </a> */}
             </div>
-        </div>
-    );
+          </>
+        ))}
+      </div>
+    </div>
+  );
 }
