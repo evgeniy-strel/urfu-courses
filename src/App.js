@@ -1,17 +1,22 @@
 import React from 'react';
 import './style.css';
-
-import Header from './components/Header/Header';
 import Sidebar from './components/Sidebar/Sidebar';
-import Cards from './components/Cards/Cards';
-import Tracks from './components/Tracks/Tracks';
 import Main from './pages/Main/Main';
+import { Route, Routes } from 'react-router-dom';
+import Search from './pages/Search/Search';
+import Header from './components/Header/Header';
 
 function App() {
   return (
-    <div className='wrapper'>
+    <div className="wrapper">
       <Sidebar />
-      <Main />
+      <div className="main_container">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/search" element={<Search />}></Route>
+        </Routes>
+      </div>
     </div>
   );
 }

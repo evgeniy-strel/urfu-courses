@@ -1,0 +1,35 @@
+.cards_title_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.cards_view {
+  display: flex;
+  gap: 13px;
+}
+
+.cards_view img {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.1s;
+}
+
+.cards_view img:hover {
+  opacity: 0.7;
+}
+
+.cards_view .active_view {
+  opacity: 1;
+}
+
+.cards_title {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+}

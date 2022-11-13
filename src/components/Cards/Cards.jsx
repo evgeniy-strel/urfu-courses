@@ -1,39 +1,55 @@
 import React from 'react';
-import './cards.css';
+import './cards.scss';
 import { courses } from './../../mocks/courses';
-import { gradients, getRandomGradient } from './../../gradients/gradients';
-
-// обсудить градиенты карточек при отсутствии картинок: все единым градиентом или берется из базы
-
-const getBackgroundStyles = (course) => {
-  if (course.bgImg) {
-    return `url(${course.bgImg})`;
-  }
-  return gradients[0];
-};
+import CardRowView from './Card/CardRowView/CardRowView';
+import CardColumnView from './Card/CardColumnView/CardColumnView';
 
 export default function Cards() {
+  const [isRowView, setIsRowView] = React.useState(true);
+
+  const setRowView = () => {
+    setIsRowView(true);
+  };
+
+  const setColumnView = () => {
+    setIsRowView(false);
+  };
+
   return (
-    <div className='cards'>
-      <p className='cards_title'>Список всех найденных курсов:</p>
-      <div className='cards_list'>
-        {courses.map((course) => (
-          <>
-            <div className='card' key={course.id}>
-              <div
-                className='card_background'
-                style={{
-                  background: getBackgroundStyles(course),
-                  backgroundSize: 'cover',
-                }}></div>
-              <p className='card_title'>{course.title}</p>
-              {/* <a href="#">
-                        <span className="link"></span>
-                    </a> */}
-            </div>
-          </>
-        ))}
+    <div className="cards">
+      <div className="cards_title_container">
+        <p className="cards_title">Список всех найденных курсов:</p>
+        <div className="cards_view">
+          <img
+            src="img/row-view.svg"
+            alt="row view"
+            className={isRowView && 'active_view'}
+            onClick={setRowView}
+          />
+          <img
+            src="img/column-view.svg"
+            alt="column view"
+            className={!isRowView && 'active_view'}
+            onClick={setColumnView}
+          />
+        </div>
       </div>
+      {isRowView ? (
+        <div className="cards_row_view">
+          {courses.map((course) => (
+            <CardRowView course={course} />
+          ))}
+        </div>
+      ) : (
+        <div className="cards_column_view_container">
+          <div className="cards_column_view">
+            {courses.map((course) => (
+              <CardColumnView course={course} />
+            ))}
+          </div>
+          <div className="info_about_course"></div>
+        </div>
+      )}
     </div>
   );
 }

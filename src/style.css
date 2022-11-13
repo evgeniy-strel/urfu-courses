@@ -21,6 +21,8 @@ body {
   border-left: 3px solid #6f6f6f;
   border-right: 3px solid #6f6f6f;
   box-shadow: 0px 0px 85px 20px rgba(0, 0, 0, 0.45);
+  min-height: 100vh;
+  padding-bottom: 30px;
 }
 
 .wrapper:after {

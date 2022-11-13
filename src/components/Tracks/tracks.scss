@@ -1,0 +1,84 @@
+.tracks {
+  font-family: 'Inter', sans-serif;
+}
+
+.tracks_title {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.tracks_list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.track {
+   background: #fff;
+  /* border: 50px black; */
+   margin: 15px 0;
+  width: 795px;
+  height: 64px;
+  border-radius: 15px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+
+  transition: 0.4s;
+}
+
+.track .track_title {
+  /* text-align: center; */
+  /* vertical-align: middle; */
+  color: #01b3ff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 27px;
+}
+
+/* .track .track_bar {
+  width: 200px;
+  height: 15px;
+  background-color: rgb(209, 238, 255);
+  border-radius: 10px;
+
+  margin-right: 50px;
+  display: flex;
+  justify-content: right;
+} */
+
+.progress {
+  background-color: #D1EEFF;
+  border-radius: 15px;
+  position: relative;
+  margin: 15px 0;
+  height: 20px;
+  width: 200px;
+}
+
+.progress-done {
+  /*Переделать на правый край*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #81CAF3;
+  border-radius: 20px;
+  color: #fff;
+  height: 100%;
+  width: 0;
+  opacity: 0;
+  transition: 1s ease 0.3s;
+}
+
+
+.track:hover {
+  transform: scale(0.99, 0.99);
+}

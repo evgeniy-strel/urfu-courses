@@ -1,6 +1,6 @@
 import React from 'react';
 import CourseBlock from './CourseBlock/CourseBlock';
-import './sidebar.css';
+import './sidebar.scss';
 
 const Sidebar = () => {
   const [activeCourse, setActiveCourse] = React.useState(null);
@@ -9,9 +9,9 @@ const Sidebar = () => {
   const emojyCourses = ['👶', '👦', '🧔', '👴'];
 
   return (
-    <div className='sidebar'>
-      <p className='sidebar_title'>URFU Courses</p>
-      <div className='list_courses'>
+    <div className="sidebar">
+      <p className="sidebar_title">URFU Courses</p>
+      <div className="list_courses">
         {listCourses.map((numberCourse) => (
           <CourseBlock
             numberCourse={numberCourse}
